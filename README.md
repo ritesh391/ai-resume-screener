@@ -35,9 +35,9 @@ Response: { match_score, strengths[], gaps[], summary, ... }
 ### Backend
 ```bash
 cd backend
-cp .env.example .env   # fill in DATABASE_URL and GROQ_API_KEY
+cp .env.example .env   
 npm install
-npm run dev             # starts on http://localhost:5000
+npm run dev          
 ```
 The `screenings` table is created automatically on first run.
 
@@ -45,9 +45,7 @@ The `screenings` table is created automatically on first run.
 ```bash
 cd frontend
 npm install
-npm run dev              # starts on http://localhost:5173
-```
-If your backend runs somewhere other than localhost:5000, set `VITE_API_URL` in a `frontend/.env` file.
+npm run dev              
 
 ## Key Decisions
 - **Groq over OpenAI/Gemini:** free tier, fast inference, good enough reasoning quality for structured scoring tasks.
@@ -65,4 +63,4 @@ If your backend runs somewhere other than localhost:5000, set `VITE_API_URL` in 
 - Batch screening (multiple resumes against one JD)
 
 ## Time Spent
-(Fill in your actual hours.)
+(6 hours.)
